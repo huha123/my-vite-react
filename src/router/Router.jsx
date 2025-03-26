@@ -1,15 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Content from "../pages/Content.jsx";
-import Main from "../pages/Main.jsx";
+import { Route, Routes } from "react-router-dom";
+import Content from "../pages/Content";
+import Main from "../pages/Main";
 
 const Router = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="content" element={<Content />} />
-    </Routes>
-  </BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Main />} />
+    <Route path="content" element={<Content />} />
+    <Route path="nested" element={<Content />} />
+  </Routes>
 );
 
 export default Router;
