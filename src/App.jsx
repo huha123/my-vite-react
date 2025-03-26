@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Router from "/src/router/Router";
-import "/src/css/Main.css";
+import "./App.css";
 
 const App = () => {
   useEffect(() => {
@@ -10,8 +10,16 @@ const App = () => {
     };
   }, []);
 
-
-  return <Router />;
-}
+  return (
+    <div className="parent">
+      <div className="child">Header</div>
+      <div className="main">
+        <div className="child">Sidebar</div>
+        <div className="child content"><Router /></div>
+      </div>
+      <div className="child">Footer</div>
+    </div>
+  );
+};
 
 export default App;
