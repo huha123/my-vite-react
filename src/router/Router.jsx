@@ -1,14 +1,21 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Content from "../pages/Content";
 import Main from "../pages/Main";
+import NotFound from "../pages/NotFound";
 
-const Router = () => (
-  <Routes>
-    <Route path="/" element={<Main />} />
-    <Route path="content" element={<Content />} />
-    <Route path="nested" element={<Content />} />
-  </Routes>
-);
+const Router = () => {
+  const routes = [
+    {
+      path: "/",
+      element: <Main />,
+    },
+    {
+      path: "content",
+      element: <Content />,
+    },
+    { path: "*", element: <NotFound /> },
+  ]
 
+  return useRoutes(routes);
+};
 export default Router;

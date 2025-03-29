@@ -1,25 +1,38 @@
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
-import Router from "/src/router/Router.jsx";
-import SideBar from "/src/pages/SideBar.jsx";
+import Router from "/src/router/Router";
 
 const App = () => {
-  useEffect(() => {
-    console.log("### App mounted !!");
-    return () => {
-      console.log("### clear App unmount !!");
-    };
-  }, []);
-
+  // return <>app page</>;
   return (
-    <div className="parent">
-      <div className="child">Header</div>
-      <div className="main">
-        <div className="child"><SideBar/></div>
-        <div className="child content"><Router /></div>
-      </div>
-      <div className="child">Footer</div>
-    </div>
+    <>
+      {/* <div className="container">
+        <div>header</div>
+        <div>left</div>
+        <div>
+          <Router />
+        </div>
+      </div> */}
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <Link to={"/"}>home</Link>
+            </li>
+            <li>
+              <Link to={"content"}>content</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <Router />
+        </section>
+        <aside>aside</aside>
+      </main>
+      <footer>footer</footer>
+    </>
   );
 };
 

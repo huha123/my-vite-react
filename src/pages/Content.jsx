@@ -1,13 +1,23 @@
 import React, { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Content = () => {
+  const [searchParams] = useSearchParams();
   useEffect(() => {
-    console.log("### Home mounted !!!");
+    console.log("### Content mounted !!!");
+    console.log("### searchParams:", searchParams);
+    searchParams.forEach((v) => {
+      console.log("@@@ foreach v:", v);
+    });
     return () => {
       console.log("### clear Content unmount !!");
     };
   }, []);
-  return <div>Content</div>;
+  return (
+    <div className="container">
+      <div className="">content page</div>
+    </div>
+  );
 };
 
 export default Content;
