@@ -4,6 +4,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+env:
+  TEST_PUBLIC_KEY_2: TEST_PUBLIC_KEY_2 value
+  VITE_SOME_KEY_2: VITE_SOME_KEY_2 value
+
 jobs:
   # test:
   #   runs-on: ubuntu-latest

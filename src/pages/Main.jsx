@@ -14,6 +14,8 @@ const Main = () => {
       <div>TEST_SECRET_KEY : {import.meta.env.TEST_SECRET_KEY}</div>
       <div>TEST_PUBLIC_KEY : {import.meta.env.TEST_PUBLIC_KEY}</div>
       <div>VITE_SOME_KEY_1 : {import.meta.env.VITE_SOME_KEY_1}</div>
+      <div>TEST_PUBLIC_KEY_2 : {import.meta.env.TEST_PUBLIC_KEY_2}</div>
+      <div>VITE_SOME_KEY_2 : {import.meta.env.VITE_SOME_KEY_2}</div>
     </div>
   );
 };
