@@ -4,19 +4,27 @@ import Router from "/src/router/Router";
 import Footer from "./pages/Footer";
 import LeftSide from "./pages/LeftSide";
 import RightSide from "./pages/RightSide";
+import { useEffect } from "react";
 
 const App = () => {
-  // return <>app page</>;
+  useEffect(() => {
+    console.log("### env:", import.meta.process);
+    console.log("### BASE_URL:", import.meta.env.BASE_URL);
+
+    return () => {
+    }
+  }, []);
+
   return (
     <>
       <header>
         <nav>
           <ul>
             <li>
-              <Link to={"/"}>home</Link>
+              <Link to={import.meta.env.BASE_URL}>home</Link>
             </li>
             <li>
-              <Link to={"content"}>content</Link>
+              <Link to={`${import.meta.env.BASE_URL}/content`}>content</Link>
             </li>
           </ul>
         </nav>

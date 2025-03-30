@@ -4,13 +4,14 @@ import Main from "../pages/Main";
 import NotFound from "../pages/NotFound";
 
 const Router = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   const routes = [
     {
-      path: "/",
+      path: `${import.meta.env.BASE_URL}`,
       element: <Main />,
     },
     {
-      path: "content",
+      path: `${import.meta.env.BASE_URL}/content`,
       element: <Content />,
     },
     { path: "*", element: <NotFound /> },
