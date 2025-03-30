@@ -11,7 +11,7 @@ const Router = () => {
       element: <Main />,
     },
     {
-      path: `${import.meta.env.BASE_URL}/content`,
+      path: `${import.meta.env.BASE_URL}content`,
       element: <Content />,
     },
     { path: "*", element: <NotFound /> },

@@ -24,7 +24,7 @@ const App = () => {
               <Link to={import.meta.env.BASE_URL}>home</Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}/content`}>content</Link>
+              <Link to={`${import.meta.env.BASE_URL}content`}>content</Link>
             </li>
           </ul>
         </nav>
