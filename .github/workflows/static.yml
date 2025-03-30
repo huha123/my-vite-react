@@ -50,12 +50,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: env settings
-        run: |
-          echo TEST_SECRET_KEY=${{ secrets.TEST_SECRET_KEY }} >> .env
-          echo TEST_PUBLIC_KEY=${{ vars.TEST_PUBLIC_KEY }} >> .env
-          echo VITE_SOME_KEY_1=${{ vars.VITE_SOME_KEY_1 }} >> .env
-
       - name: Build project
         run: pnpm run build
 
