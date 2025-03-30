@@ -7,14 +7,6 @@ import RightSide from "./pages/RightSide";
 import { useEffect } from "react";
 
 const App = () => {
-  useEffect(() => {
-    console.log("### env:", import.meta.process);
-    console.log("### BASE_URL:", import.meta.env.BASE_URL);
-
-    return () => {
-    }
-  }, []);
-
   return (
     <>
       <header>
