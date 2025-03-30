@@ -5,12 +5,6 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  TEST_PUBLIC_KEY_2: TEST_PUBLIC_KEY_2 value
-  VITE_SOME_KEY_2: VITE_SOME_KEY_2 value
-  VITE_SECRET_KEY_ENV: ${{secrets.VITE_SECRET_KEY_3}}
-  VITE_PUBLIC_KEY_ENV: ${{vars.VITE_SOME_KEY_1}}
-
 jobs:
   # test:
   #   runs-on: ubuntu-latest
@@ -51,12 +45,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: env settings
-        run: |
-          echo VITE_SECRET_ENV_ECHO=${{ secrets.VITE_SECRET_KEY_3 }} >> .env
-          echo VITE_TEST_PUBLIC_KEY_ECHO=${{ vars.TEST_PUBLIC_KEY }} >> .env
-          echo VITE_SOME_KEY_1_ECHO=${{ vars.VITE_SOME_KEY_1 }} >> .env
 
       - name: Build project
         run: pnpm run build
