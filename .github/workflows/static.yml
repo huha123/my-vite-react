@@ -30,19 +30,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.7
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10.6.5
+
       - name: install Nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 22
           cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install
+
+      - name: env settings
+        run: |
+          echo TEST_SECRET_KEY=${{ secrets.TEST_SECRET_KEY }} >> .env
+          echo TEST_PUBLIC_KEY=${{ secrets.TEST_PUBLIC_KEY }} >> .env
+
       - name: Build project
         run: pnpm run build
+
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
         with:
