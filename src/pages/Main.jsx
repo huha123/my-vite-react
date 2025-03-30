@@ -19,7 +19,7 @@ const Main = () => {
       <hr />
       <div>==== static.yml file</div>
       <div>TEST_PUBLIC_KEY_2 : {import.meta.env.TEST_PUBLIC_KEY_2}</div>
-      <div>VITE_PUBLIC_KEY_ENV : {import.meta.env.VITE_PUBLIC_KEY_ENV}</div>
+      <div>VITE_SECRET_KEY_ENV : {import.meta.env.VITE_SECRET_KEY_ENV}</div>
       <div>VITE_PUBLIC_KEY_ENV : {import.meta.env.VITE_PUBLIC_KEY_ENV}</div>
       <hr />
       <div>==== static.yml echo</div>
