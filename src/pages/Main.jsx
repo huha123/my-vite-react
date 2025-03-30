@@ -7,11 +7,7 @@ const Main = () => {
       console.log("### clear Main unmount !!");
     };
   }, []);
-  return (
-    <div className="container">
-      <div className="">Main page</div>
-    </div>
-  );
+  return <div className="container">Main page</div>;
 };
 
 export default Main;

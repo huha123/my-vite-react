@@ -13,11 +13,7 @@ const Content = () => {
       console.log("### clear Content unmount !!");
     };
   }, []);
-  return (
-    <div className="container">
-      <div className="">content page</div>
-    </div>
-  );
+  return <div className="container">Content page</div>;
 };
 
 export default Content;

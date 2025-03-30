@@ -1,19 +1,33 @@
-.wrapper {
-  height: 100vh;
+header {
+  margin: auto;
   display: flex;
-
-  /* Direction of the items, can be row or column */
-  flex-direction: column;
+  justify-content: center;
 }
 
-header,
-footer {
-  height: 30px;
+header > nav > ul > li {
+  display: inline-block;
+  margin: 10px;
 }
 
-main,
-section {
+main {
+  display: flex;
   flex: 1;
+  flex-direction: row;
+  /* min-height: 500px; */
+}
+
+aside {
+  flex: 1;
+}
+
+section {
+  flex: 8;
+  flex-direction: row;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
 
 .container {

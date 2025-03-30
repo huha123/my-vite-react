@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 import "./App.css";
 import Router from "/src/router/Router";
+import Footer from "./pages/Footer";
+import LeftSide from "./pages/LeftSide";
+import RightSide from "./pages/RightSide";
 
 const App = () => {
   // return <>app page</>;
   return (
     <>
-      {/* <div className="container">
-        <div>header</div>
-        <div>left</div>
-        <div>
-          <Router />
-        </div>
-      </div> */}
       <header>
         <nav>
           <ul>
@@ -22,16 +18,26 @@ const App = () => {
             <li>
               <Link to={"content"}>content</Link>
             </li>
+            <li>
+              <Link to={"content"}>content</Link>
+            </li>
           </ul>
         </nav>
       </header>
       <main>
+        <aside>
+          <LeftSide />
+        </aside>
         <section>
           <Router />
         </section>
-        <aside>aside</aside>
+        <aside>
+          <RightSide />
+        </aside>
       </main>
-      <footer>footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
