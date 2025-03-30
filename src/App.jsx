@@ -18,9 +18,6 @@ const App = () => {
             <li>
               <Link to={"content"}>content</Link>
             </li>
-            <li>
-              <Link to={"content"}>content</Link>
-            </li>
           </ul>
         </nav>
       </header>
