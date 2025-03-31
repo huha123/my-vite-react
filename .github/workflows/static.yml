@@ -49,12 +49,12 @@ jobs:
       - name: Build project
         run: pnpm run build
         env:
-          VITE_API_KEY: ${{ secrets.VITE_API_KEY}}
-          VITE_AUTH_DOMAIN: ${{ secrets.VITE_AUTH_DOMAIN}}
-          VITE_DATABASE_URL: ${{ secrets.VITE_DATABASE_URL}}
-          VITE_PROJECT_ID: ${{ secrets.VITE_PROJECT_ID}}
-          VITE_STORAGE_BUCKET: ${{ secrets.VITE_STORAGE_BUCKET}}
-          VITE_MESSAGE_SENDER_ID: ${{ secrets.VITE_MESSAGE_SENDER_ID}}
+          VITE_API_KEY: ${{ vars.VITE_API_KEY}}
+          VITE_AUTH_DOMAIN: ${{ vars.VITE_AUTH_DOMAIN}}
+          VITE_DATABASE_URL: ${{ vars.VITE_DATABASE_URL}}
+          VITE_PROJECT_ID: ${{ vars.VITE_PROJECT_ID}}
+          VITE_STORAGE_BUCKET: ${{ vars.VITE_STORAGE_BUCKET}}
+          VITE_MESSAGE_SENDER_ID: ${{ vars.VITE_MESSAGE_SENDER_ID}}
 
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
