@@ -46,16 +46,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: access to secrets
-        run: |
-          echo "VITE_SECRET_KEY=${{secrets.VITE_SECRET_KEY}}" >> .env
-          echo "VITE_PUBLIC_KEY=${{vars.VITE_PUBLIC_KEY}}" >> .env
-        # env:
-        #   VITE_SECRET_KEY: ${{secrets.VITE_SECRET_KEY}}
-        #   VITE_PUBLIC_KEY: ${{vars.VITE_PUBLIC_KEY}}
-
       - name: Build project
         run: pnpm run build
+        env:
+          VITE_SECRET_KEY: ${{ secrets.VITE_SECRET_KEY }}
 
       - name: Upload production-ready build files
         uses: actions/upload-pages-artifact@v3
