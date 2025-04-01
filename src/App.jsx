@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <header>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to={import.meta.env.BASE_URL}>home</Link>
@@ -19,22 +19,23 @@ const App = () => {
               <Link to={`${import.meta.env.BASE_URL}content`}>content</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
+        <h1>Super Diction</h1>
       </header>
       <main>
-        <aside>
+        {/* <aside>
           <LeftSide />
-        </aside>
+        </aside> */}
         <section>
           <Router />
         </section>
-        <aside>
+        {/* <aside>
           <RightSide />
-        </aside>
+        </aside> */}
       </main>
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </>
   );
 };

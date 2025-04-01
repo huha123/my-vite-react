@@ -30,10 +30,140 @@ footer {
   justify-content: center;
 }
 
+input {
+  /* background-color: #eee; */
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+textarea {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
   gap: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
+}
+
+/*
+.container{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+width:200px;
+gap:24px;
+border:1px solid #ebeaec;
+box-shadow:0px 2px 4px rgba(0,0,0,0.3);
+border-radius:16px;
+padding:24px;
+} */
+
+/* Card styling */
+.card {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card content styling */
+.card-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #777;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  /* background-color: #3498db; */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button.up {
+  background-color: #3498db;
+}
+.button.down {
+  background-color: #dc3545;
+}
+
+.button:hover {
+  /* background-color: #2980b9; */
+  transform: translateY(-2px);
 }
